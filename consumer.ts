@@ -12,7 +12,11 @@ private messageProcessor: any
   }
 
   public async startConsumer(): Promise<void> {
-    const topic: ConsumerSubscribeTopic = {
+    // const topic: ConsumerSubscribeTopic = {
+    //   topic: 'example-topic',
+    //   fromBeginning: false
+    // }
+    const topic: any = {
       topic: 'example-topic',
       fromBeginning: false
     }
@@ -34,10 +38,15 @@ private messageProcessor: any
   }
 
   public async startBatchConsumer(): Promise<void> {
-    const topic: ConsumerSubscribeTopic = {
+    // const topic: ConsumerSubscribeTopic = {
+    //   topic: 'example-topic',
+    //   fromBeginning: false
+    // }
+    const topic: any = {
       topic: 'example-topic',
       fromBeginning: false
     }
+    
 
     try {
       await this.kafkaConsumer.connect()
